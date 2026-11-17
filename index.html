@@ -744,7 +744,7 @@ header.top .tagline,header.top .usecase,header.top .dims{grid-column:1 / -1}
    (bouton Imprimer) — pas de coupure d'encadré, rien hors page. */
 @media print{
   @page{size:A4 portrait;margin:10mm 10mm 14mm;
-    @bottom-left{content:"Audrey LOUIS · Identité professionnelle animée";font:600 8.5pt "Atkinson Hyperlegible",Verdana,sans-serif;color:#4A2545}
+    @bottom-left{content:"Audrey LOUIS · Portfolio professionnel interactif";font:600 8.5pt "Atkinson Hyperlegible",Verdana,sans-serif;color:#4A2545}
     @bottom-right{content:"Page " counter(page) " / " counter(pages);font:600 8.5pt "Atkinson Hyperlegible",Verdana,sans-serif;color:#4A2545}}
   *,*::before,*::after{animation:none!important;transition:none!important}
   html,body{background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -1316,6 +1316,18 @@ footer.sig b,footer.sig .ver,footer.sig em,.sig-qr span{color:#fff}
 #c-rncp .tl2-dot{background:#fff}
 
 @media (prefers-reduced-motion:reduce){.armed .play *{animation:none!important}}
+
+/* v71 : pagination de l'impression */
+@media print{
+  .fx-card,.fx-card .tl2-card{break-inside:auto!important;overflow:visible!important;display:block!important}
+  .fx-card>*+*{margin-top:10px}
+  .fx-card .ct{break-before:auto!important;break-after:avoid}
+  .fx-card .fx-steps,.fx-card .fx-h{break-after:avoid}
+  html .tl2-head .tl2-tog,html .tl2-chev{display:none!important}
+  .tl2-head{padding-right:0!important}
+  #realisations .rd-panels{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  #realisations .rd-panels .rd-p{max-width:none!important;margin:0!important}
+}
 </style>
 </head>
 <body>
