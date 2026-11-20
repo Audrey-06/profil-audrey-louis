@@ -1328,6 +1328,13 @@ footer.sig b,footer.sig .ver,footer.sig em,.sig-qr span{color:#fff}
   #realisations .rd-panels{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   #realisations .rd-panels .rd-p{max-width:none!important;margin:0!important}
 }
+
+/* v72 : lecture confortable sur grands écrans (agrandissement global) */
+@media screen and (min-width:1280px){.wrap{zoom:1.12;max-width:1290px}}
+@media screen and (min-width:1700px){.wrap{zoom:1.25;max-width:1300px}}
+
+/* v72 : en pause, le détail d'une réalisation s'affiche sans animation */
+.paused .rd-in,.paused .rd-p{animation:none!important;opacity:1!important;transform:none!important}
 </style>
 </head>
 <body>
